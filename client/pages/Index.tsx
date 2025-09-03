@@ -175,7 +175,7 @@ export default function Index() {
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   <span>Variables</span>
-                  <span className="font-mono">33</span>
+                  <span className="font-mono">47</span>
                 </div>
                 <div className={`flex justify-between transition-colors duration-300 ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
