@@ -3,87 +3,78 @@
 
 // TIER 1: PRIMITIVES - Raw hex values
 export const colorPrimitives = {
-  // Grays
-  'color/gray/50': '#fafafa',
-  'color/gray/100': '#f5f5f5',
-  'color/gray/200': '#e5e5e5',
-  'color/gray/300': '#d4d4d4',
-  'color/gray/400': '#a3a3a3',
-  'color/gray/500': '#737373',
-  'color/gray/600': '#525252',
-  'color/gray/700': '#404040',
-  'color/gray/800': '#262626',
-  'color/gray/900': '#171717',
-  'color/gray/950': '#0a0a0a',
+  // Gray - Neutral colors for text, backgrounds, and borders
+  'color/gray/25': '#EFF0F2',   // Ultra light gray
+  'color/gray/50': '#E4E7EB',   // Very light gray
+  'color/gray/100': '#D3D7DD',  // Light gray
+  'color/gray/200': '#BDC3CD',  // Soft gray
+  'color/gray/300': '#A6AEBC',  // Medium light gray
+  'color/gray/400': '#909AAB',  // Medium gray
+  'color/gray/500': '#7A869A',  // Balanced gray
+  'color/gray/600': '#667080',  // Medium dark gray
+  'color/gray/700': '#515967',  // Dark gray
+  'color/gray/800': '#3D434D',  // Very dark gray
+  'color/gray/900': '#292D33',  // Ultra dark gray
+  'color/gray/1000': '#181B1F', // Near black gray
 
-  // Blues
-  'color/blue/50': '#eff6ff',
-  'color/blue/100': '#dbeafe',
-  'color/blue/200': '#bfdbfe',
-  'color/blue/300': '#93c5fd',
-  'color/blue/400': '#60a5fa',
-  'color/blue/500': '#3b82f6',
-  'color/blue/600': '#2563eb',
-  'color/blue/700': '#1d4ed8',
-  'color/blue/800': '#1e40af',
-  'color/blue/900': '#1e3a8a',
-  'color/blue/950': '#172554',
+  // Blue - Primary brand colors and interactive elements
+  'color/blue/25': '#EEF7FF',   // Ultra light blue
+  'color/blue/50': '#DBECFB',   // Very light blue
+  'color/blue/100': '#AACEEF',  // Light blue
+  'color/blue/200': '#80B6E7',  // Soft blue
+  'color/blue/300': '#559EDF',  // Medium light blue
+  'color/blue/400': '#2A85D7',  // Medium blue
+  'color/blue/500': '#006DCF',  // Primary blue
+  'color/blue/600': '#005BAD',  // Medium dark blue
+  'color/blue/700': '#00498A',  // Dark blue
+  'color/blue/800': '#003768',  // Very dark blue
+  'color/blue/900': '#002445',  // Ultra dark blue
+  'color/blue/1000': '#001629', // Near black blue
 
-  // Emerald
-  'color/emerald/50': '#ecfdf5',
-  'color/emerald/100': '#d1fae5',
-  'color/emerald/200': '#a7f3d0',
-  'color/emerald/300': '#6ee7b7',
-  'color/emerald/400': '#34d399',
-  'color/emerald/500': '#10b981',
-  'color/emerald/600': '#059669',
-  'color/emerald/700': '#047857',
-  'color/emerald/800': '#065f46',
-  'color/emerald/900': '#064e3b',
-  'color/emerald/950': '#022c22',
+  // Yellow - Warning states and attention elements
+  'color/yellow/50': '#FDEDD2',  // Very light yellow
+  'color/yellow/100': '#FCE1B4', // Light yellow
+  'color/yellow/200': '#F8D38F', // Soft yellow
+  'color/yellow/300': '#FAC469', // Medium light yellow
+  'color/yellow/400': '#F8B544', // Medium yellow
+  'color/yellow/500': '#F7A61E', // Primary yellow
+  'color/yellow/600': '#CE8A19', // Medium dark yellow
+  'color/yellow/700': '#A56F14', // Dark yellow
+  'color/yellow/800': '#7C530F', // Very dark yellow
+  'color/yellow/900': '#52370A', // Ultra dark yellow
+  'color/yellow/1000': '#312106', // Near black yellow
 
-  // Red
-  'color/red/50': '#fef2f2',
-  'color/red/100': '#fee2e2',
-  'color/red/200': '#fecaca',
-  'color/red/300': '#fca5a5',
-  'color/red/400': '#f87171',
-  'color/red/500': '#ef4444',
-  'color/red/600': '#dc2626',
-  'color/red/700': '#b91c1c',
-  'color/red/800': '#991b1b',
-  'color/red/900': '#7f1d1d',
-  'color/red/950': '#450a0a',
+  // Red - Error states and destructive actions
+  'color/red/25': '#FDEAEB',    // Ultra light red
+  'color/red/50': '#F1CFD2',    // Very light red
+  'color/red/100': '#E7AFB4',   // Light red
+  'color/red/200': '#DB888E',   // Soft red
+  'color/red/300': '#CF6068',   // Medium light red
+  'color/red/400': '#C33843',   // Medium red
+  'color/red/500': '#B7101D',   // Primary red
+  'color/red/600': '#990D18',   // Medium dark red
+  'color/red/700': '#7A0B13',   // Dark red
+  'color/red/800': '#5C080F',   // Very dark red
+  'color/red/900': '#3D050A',   // Ultra dark red
+  'color/red/1000': '#250306',  // Near black red
 
-  // Amber
-  'color/amber/50': '#fffbeb',
-  'color/amber/100': '#fef3c7',
-  'color/amber/200': '#fde68a',
-  'color/amber/300': '#fcd34d',
-  'color/amber/400': '#fbbf24',
-  'color/amber/500': '#f59e0b',
-  'color/amber/600': '#d97706',
-  'color/amber/700': '#b45309',
-  'color/amber/800': '#92400e',
-  'color/amber/900': '#78350f',
-  'color/amber/950': '#451a03',
-
-  // Purple
-  'color/purple/50': '#faf5ff',
-  'color/purple/100': '#f3e8ff',
-  'color/purple/200': '#e9d5ff',
-  'color/purple/300': '#d8b4fe',
-  'color/purple/400': '#c084fc',
-  'color/purple/500': '#a855f7',
-  'color/purple/600': '#9333ea',
-  'color/purple/700': '#7c3aed',
-  'color/purple/800': '#6b21a8',
-  'color/purple/900': '#581c87',
-  'color/purple/950': '#3b0764',
+  // Green - Success states and positive actions
+  'color/green/25': '#E5F8E4',  // Ultra light green
+  'color/green/50': '#CDE6CC',  // Very light green
+  'color/green/100': '#ABD5AA', // Light green
+  'color/green/200': '#82C080', // Soft green
+  'color/green/300': '#58AA55', // Medium light green
+  'color/green/400': '#2E952A', // Medium green
+  'color/green/500': '#048000', // Primary green
+  'color/green/600': '#036B00', // Medium dark green
+  'color/green/700': '#035500', // Dark green
+  'color/green/800': '#024000', // Very dark green
+  'color/green/900': '#012B00', // Ultra dark green
+  'color/green/1000': '#011A00', // Near black green
 
   // Special colors
-  'color/white': '#ffffff',
-  'color/black': '#000000',
+  'color/white': '#FFFFFF',     // Pure white
+  'color/black': '#000000',     // Pure black
 } as const;
 
 // TIER 2: TOKENS - Semantic mappings to primitives
