@@ -180,6 +180,12 @@ export default function Index() {
                 <div className={`flex justify-between transition-colors duration-300 ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
+                  <span>Accents</span>
+                  <span className="font-mono">3</span>
+                </div>
+                <div className={`flex justify-between transition-colors duration-300 ${
+                  darkMode ? 'text-gray-300' : 'text-gray-600'
+                }`}>
                   <span>Light/Dark</span>
                   <span className="text-green-500">✓</span>
                 </div>
