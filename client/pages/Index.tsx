@@ -169,13 +169,13 @@ export default function Index() {
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   <span>Tokens</span>
-                  <span className="font-mono">88</span>
+                  <span className="font-mono">72</span>
                 </div>
                 <div className={`flex justify-between transition-colors duration-300 ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   <span>Variables</span>
-                  <span className="font-mono">30</span>
+                  <span className="font-mono">33</span>
                 </div>
                 <div className={`flex justify-between transition-colors duration-300 ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
