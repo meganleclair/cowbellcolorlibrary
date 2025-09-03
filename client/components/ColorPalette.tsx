@@ -259,7 +259,7 @@ export function VariablesSection() {
               key={key}
               label={key.replace(/-/g, ' ')}
               value={value}
-              description="Unmapped decorative color"
+              description={`${mode} mode`}
             />
           ))}
         </div>
