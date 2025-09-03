@@ -308,10 +308,26 @@ export function resolveVariableColor(
   variableKey: string,
   mode: 'light' | 'dark' = 'light'
 ): string {
+  // Check if it's an accent color first
+  if (variableKey.startsWith('accent')) {
+    const accentVariables = accentColors[mode] as Record<string, string>;
+    const accentValue = accentVariables[variableKey];
+    if (accentValue) return accentValue;
+  }
+
+  // Otherwise resolve from semantic variables
   const variables = colorVariables[mode] as Record<string, string>;
   const tokenKey = variables[variableKey] as keyof typeof colorTokens;
   if (!tokenKey) return '#000000'; // fallback
   return resolveTokenColor(tokenKey);
+}
+
+export function resolveAccentColor(
+  accentKey: string,
+  mode: 'light' | 'dark' = 'light'
+): string {
+  const accents = accentColors[mode] as Record<string, string>;
+  return accents[accentKey] || '#000000';
 }
 
 // Fusion Schema Compatible Export (with empty spacing and typography)
