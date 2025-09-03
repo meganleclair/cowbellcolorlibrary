@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { PrimitivesSection, TokensSection, VariablesSection } from '@/components/ColorPalette';
 import { IntegrationDocs } from '@/components/IntegrationDocs';
 import { fusionColorSystem, mantineColorTheme } from '@/lib/design-system';
-import { Palette, Download, Code, Layers, Sun, Moon } from 'lucide-react';
+import { Palette, Download, Code, Layers, Sun, Moon, BookOpen } from 'lucide-react';
 
 type Section = 'primitives' | 'tokens' | 'variables' | 'export';
 
