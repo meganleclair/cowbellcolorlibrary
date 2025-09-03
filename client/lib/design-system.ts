@@ -346,7 +346,7 @@ export const fusionColorSystem = {
 export const mantineColorTheme = {
   colors: Object.fromEntries(
     Object.entries(colorTokens).map(([key, value]) => [
-      key.replace('/', '-'),
+      key,
       resolveTokenColor(key as keyof typeof colorTokens)
     ])
   ),
