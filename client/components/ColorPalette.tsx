@@ -135,14 +135,20 @@ export function TokensSection() {
     success: Object.fromEntries(
       Object.entries(colorTokens).filter(([key]) => key.startsWith('success/'))
     ),
+    emerald: Object.fromEntries(
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('emerald/'))
+    ),
     error: Object.fromEntries(
       Object.entries(colorTokens).filter(([key]) => key.startsWith('error/'))
     ),
     warning: Object.fromEntries(
       Object.entries(colorTokens).filter(([key]) => key.startsWith('warning/'))
     ),
-    info: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('info/'))
+    amber: Object.fromEntries(
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('amber/'))
+    ),
+    neutral: Object.fromEntries(
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('neutral/'))
     ),
   };
 
