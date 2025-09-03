@@ -9,6 +9,7 @@ const tailwindColors = {
 
   // Color scales
   gray: {
+    25: colorPrimitives['color/gray/25'],
     50: colorPrimitives['color/gray/50'],
     100: colorPrimitives['color/gray/100'],
     200: colorPrimitives['color/gray/200'],
@@ -19,9 +20,10 @@ const tailwindColors = {
     700: colorPrimitives['color/gray/700'],
     800: colorPrimitives['color/gray/800'],
     900: colorPrimitives['color/gray/900'],
-    950: colorPrimitives['color/gray/950'],
+    1000: colorPrimitives['color/gray/1000'],
   },
   blue: {
+    25: colorPrimitives['color/blue/25'],
     50: colorPrimitives['color/blue/50'],
     100: colorPrimitives['color/blue/100'],
     200: colorPrimitives['color/blue/200'],
@@ -32,7 +34,7 @@ const tailwindColors = {
     700: colorPrimitives['color/blue/700'],
     800: colorPrimitives['color/blue/800'],
     900: colorPrimitives['color/blue/900'],
-    950: colorPrimitives['color/blue/950'],
+    1000: colorPrimitives['color/blue/1000'],
   },
   emerald: {
     25: colorPrimitives['color/green/25'],
