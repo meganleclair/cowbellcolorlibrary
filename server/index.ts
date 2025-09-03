@@ -27,5 +27,13 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
+  // Color System API routes
+  app.get("/api/color-system", handleColorSystem);
+  app.get("/api/color-system/fusion", handleFusionSchema);
+  app.get("/api/color-system/mantine", handleMantineTheme);
+  app.get("/api/color-system/primitives", handlePrimitives);
+  app.get("/api/color-system/tokens", handleTokens);
+  app.get("/api/color-system/variables", handleVariables);
+
   return app;
 }
