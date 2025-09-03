@@ -27,8 +27,19 @@ import { mantineColorTheme } from './lib/design-system';
 function App() {
   return (
     <MantineProvider theme={mantineColorTheme}>
-      {/* Your app */}
+      <YourAppComponents />
     </MantineProvider>
+  );
+}
+
+// Usage in components
+import { Button } from '@mantine/core';
+
+function MyComponent() {
+  return (
+    <Button color="primary-500">
+      Primary Button
+    </Button>
   );
 }`,
 
