@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PrimitivesSection, TokensSection, VariablesSection } from '@/components/ColorPalette';
+import { IntegrationDocs } from '@/components/IntegrationDocs';
 import { fusionColorSystem, mantineColorTheme } from '@/lib/design-system';
 import { Palette, Download, Code, Layers, Sun, Moon } from 'lucide-react';
 
