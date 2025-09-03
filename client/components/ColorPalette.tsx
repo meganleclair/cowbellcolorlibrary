@@ -171,19 +171,19 @@ export function TokensSection() {
 
 export function VariablesSection() {
   const [mode, setMode] = useState<'light' | 'dark'>('light');
-  
+
   const variableGroups = {
-    'Text Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('text-color/'))
+    'Surface Colors': Object.fromEntries(
+      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('surface-'))
     ),
-    'Background Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('bg-color/'))
+    'Icon Colors': Object.fromEntries(
+      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('icon-'))
+    ),
+    'Text Colors': Object.fromEntries(
+      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('text-'))
     ),
     'Border Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('border-color/'))
-    ),
-    'Interactive Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('interactive/'))
+      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('border-'))
     ),
   };
 
@@ -222,20 +222,20 @@ export function VariablesSection() {
             resolveVariableColor(key, mode)
           ])
         );
-        
+
         return (
           <div key={groupName} className="space-y-4">
             <div>
               <h3 className="text-lg font-semibold text-gray-900">{groupName}</h3>
               <p className="text-sm text-gray-600 mt-1">
-                Contextual usage colors for {mode} mode
+                Semantic {groupName.toLowerCase()} for {mode} mode
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {Object.entries(resolvedVariables).map(([key, value]) => (
                 <ColorSwatch
                   key={key}
-                  label={key.replace('/', ' / ')}
+                  label={key.replace(/-/g, ' ')}
                   value={value}
                   description={`${mode} mode`}
                 />
@@ -244,6 +244,26 @@ export function VariablesSection() {
           </div>
         );
       })}
+
+      {/* Accent Colors Section */}
+      <div className="space-y-4">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900">Accent Colors</h3>
+          <p className="text-sm text-gray-600 mt-1">
+            Decorative colors for charts, badges, and non-semantic elements ({mode} mode)
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {Object.entries(accentColors[mode]).map(([key, value]) => (
+            <ColorSwatch
+              key={key}
+              label={key.replace(/-/g, ' ')}
+              value={value}
+              description="Unmapped decorative color"
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
