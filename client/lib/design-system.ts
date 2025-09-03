@@ -283,14 +283,66 @@ export const colorVariables = {
 // ACCENT COLORS - Intentionally unmapped decorative colors
 export const accentColors = {
   light: {
+    // Accent 1 - Cyan/Teal
+    'accent1-25': '#E8FAFD',
+    'accent1-500': '#4BCFDA',
+    'accent1-900': '#04475F',
+
+    // Accent 2 - Purple (existing)
     'accent2-25': '#F1EEFF',
     'accent2-500': '#9C88FF',
     'accent2-900': '#1D1B75',
+
+    // Accent 3 - Magenta/Pink
+    'accent3-25': '#F4E6F7',
+    'accent3-500': '#A23BB3',
+    'accent3-900': '#5E1768',
+
+    // Accent 4 - Orange
+    'accent4-25': '#FFF3EB',
+    'accent4-500': '#FFB370',
+    'accent4-900': '#A64A1A',
+
+    // Accent 5 - Red/Coral
+    'accent5-25': '#FFEDE9',
+    'accent5-500': '#FF5E3A',
+    'accent5-900': '#8C2A13',
+
+    // Accent 6 - Lime/Green
+    'accent6-25': '#F0FBE5',
+    'accent6-500': '#B2E94B',
+    'accent6-900': '#3F5C1B',
   },
   dark: {
+    // Accent 1 - Cyan/Teal
+    'accent1-25': '#0E2F34',
+    'accent1-500': '#0094A8',
+    'accent1-900': '#BFEFF6',
+
+    // Accent 2 - Purple (existing)
     'accent2-25': '#211B4C',
     'accent2-500': '#6A4FFB',
     'accent2-900': '#D9D2FF',
+
+    // Accent 3 - Magenta/Pink
+    'accent3-25': '#341B3A',
+    'accent3-500': '#9D2698',
+    'accent3-900': '#E4B3EC',
+
+    // Accent 4 - Orange
+    'accent4-25': '#3B2415',
+    'accent4-500': '#E9853F',
+    'accent4-900': '#FFE0C8',
+
+    // Accent 5 - Red/Coral
+    'accent5-25': '#37160F',
+    'accent5-500': '#E0461F',
+    'accent5-900': '#FFB8A8',
+
+    // Accent 6 - Lime/Green
+    'accent6-25': '#1F2B17',
+    'accent6-500': '#9CD63F',
+    'accent6-900': '#D5F69B',
   },
 } as const;
 
