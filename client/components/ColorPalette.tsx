@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { colorPrimitives, colorTokens, colorVariables, resolveTokenColor, resolveVariableColor } from '@/lib/design-system';
+import { colorPrimitives, colorTokens, colorVariables, accentColors, resolveTokenColor, resolveVariableColor } from '@/lib/design-system';
 import { Copy, Check } from 'lucide-react';
 
 interface ColorSwatchProps {
