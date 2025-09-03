@@ -80,6 +80,7 @@ export const colorPrimitives = {
 // TIER 2: TOKENS - Semantic mappings to primitives
 export const colorTokens = {
   // Primary brand colors
+  'primary/25': 'color/blue/25',
   'primary/50': 'color/blue/50',
   'primary/100': 'color/blue/100',
   'primary/200': 'color/blue/200',
@@ -90,9 +91,10 @@ export const colorTokens = {
   'primary/700': 'color/blue/700',
   'primary/800': 'color/blue/800',
   'primary/900': 'color/blue/900',
-  'primary/950': 'color/blue/950',
+  'primary/1000': 'color/blue/1000',
 
-  // Secondary brand colors
+  // Secondary brand colors (Gray)
+  'secondary/25': 'color/gray/25',
   'secondary/50': 'color/gray/50',
   'secondary/100': 'color/gray/100',
   'secondary/200': 'color/gray/200',
@@ -103,22 +105,24 @@ export const colorTokens = {
   'secondary/700': 'color/gray/700',
   'secondary/800': 'color/gray/800',
   'secondary/900': 'color/gray/900',
-  'secondary/950': 'color/gray/950',
+  'secondary/1000': 'color/gray/1000',
 
-  // Success colors
-  'success/50': 'color/emerald/50',
-  'success/100': 'color/emerald/100',
-  'success/200': 'color/emerald/200',
-  'success/300': 'color/emerald/300',
-  'success/400': 'color/emerald/400',
-  'success/500': 'color/emerald/500',
-  'success/600': 'color/emerald/600',
-  'success/700': 'color/emerald/700',
-  'success/800': 'color/emerald/800',
-  'success/900': 'color/emerald/900',
-  'success/950': 'color/emerald/950',
+  // Success colors (Green)
+  'success/25': 'color/green/25',
+  'success/50': 'color/green/50',
+  'success/100': 'color/green/100',
+  'success/200': 'color/green/200',
+  'success/300': 'color/green/300',
+  'success/400': 'color/green/400',
+  'success/500': 'color/green/500',
+  'success/600': 'color/green/600',
+  'success/700': 'color/green/700',
+  'success/800': 'color/green/800',
+  'success/900': 'color/green/900',
+  'success/1000': 'color/green/1000',
 
-  // Error colors
+  // Error colors (Red)
+  'error/25': 'color/red/25',
   'error/50': 'color/red/50',
   'error/100': 'color/red/100',
   'error/200': 'color/red/200',
@@ -129,35 +133,23 @@ export const colorTokens = {
   'error/700': 'color/red/700',
   'error/800': 'color/red/800',
   'error/900': 'color/red/900',
-  'error/950': 'color/red/950',
+  'error/1000': 'color/red/1000',
 
-  // Warning colors
-  'warning/50': 'color/amber/50',
-  'warning/100': 'color/amber/100',
-  'warning/200': 'color/amber/200',
-  'warning/300': 'color/amber/300',
-  'warning/400': 'color/amber/400',
-  'warning/500': 'color/amber/500',
-  'warning/600': 'color/amber/600',
-  'warning/700': 'color/amber/700',
-  'warning/800': 'color/amber/800',
-  'warning/900': 'color/amber/900',
-  'warning/950': 'color/amber/950',
+  // Warning colors (Yellow)
+  'warning/50': 'color/yellow/50',
+  'warning/100': 'color/yellow/100',
+  'warning/200': 'color/yellow/200',
+  'warning/300': 'color/yellow/300',
+  'warning/400': 'color/yellow/400',
+  'warning/500': 'color/yellow/500',
+  'warning/600': 'color/yellow/600',
+  'warning/700': 'color/yellow/700',
+  'warning/800': 'color/yellow/800',
+  'warning/900': 'color/yellow/900',
+  'warning/1000': 'color/yellow/1000',
 
-  // Info colors
-  'info/50': 'color/purple/50',
-  'info/100': 'color/purple/100',
-  'info/200': 'color/purple/200',
-  'info/300': 'color/purple/300',
-  'info/400': 'color/purple/400',
-  'info/500': 'color/purple/500',
-  'info/600': 'color/purple/600',
-  'info/700': 'color/purple/700',
-  'info/800': 'color/purple/800',
-  'info/900': 'color/purple/900',
-  'info/950': 'color/purple/950',
-
-  // Neutral colors
+  // Neutral colors (Gray)
+  'neutral/25': 'color/gray/25',
   'neutral/50': 'color/gray/50',
   'neutral/100': 'color/gray/100',
   'neutral/200': 'color/gray/200',
@@ -168,7 +160,7 @@ export const colorTokens = {
   'neutral/700': 'color/gray/700',
   'neutral/800': 'color/gray/800',
   'neutral/900': 'color/gray/900',
-  'neutral/950': 'color/gray/950',
+  'neutral/1000': 'color/gray/1000',
 
   // Special tokens
   'pure-white': 'color/white',
