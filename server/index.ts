@@ -2,6 +2,14 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import {
+  handleColorSystem,
+  handleFusionSchema,
+  handleMantineTheme,
+  handlePrimitives,
+  handleTokens,
+  handleVariables
+} from "./routes/color-system";
 
 export function createServer() {
   const app = express();
