@@ -320,6 +320,7 @@ export const fusionColorSystem = {
     primitives: colorPrimitives,
     tokens: colorTokens,
     variables: colorVariables,
+    accents: accentColors,
   },
   spacing: [], // Empty as required by Fusion schema
   typography: [], // Empty as required by Fusion schema
