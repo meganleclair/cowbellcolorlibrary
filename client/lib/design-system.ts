@@ -179,7 +179,6 @@ export const colorVariables = {
     'text-color/success': 'success/700',
     'text-color/error': 'error/700',
     'text-color/warning': 'warning/700',
-    'text-color/info': 'info/700',
     'text-color/brand': 'primary/600',
 
     // Background colors
@@ -192,7 +191,6 @@ export const colorVariables = {
     'bg-color/success': 'success/50',
     'bg-color/error': 'error/50',
     'bg-color/warning': 'warning/50',
-    'bg-color/info': 'info/50',
 
     // Border colors
     'border-color/primary': 'neutral/200',
@@ -201,7 +199,6 @@ export const colorVariables = {
     'border-color/success': 'success/300',
     'border-color/error': 'error/300',
     'border-color/warning': 'warning/300',
-    'border-color/info': 'info/300',
 
     // Interactive colors
     'interactive/primary': 'primary/500',
@@ -221,7 +218,6 @@ export const colorVariables = {
     'text-color/success': 'success/400',
     'text-color/error': 'error/400',
     'text-color/warning': 'warning/400',
-    'text-color/info': 'info/400',
     'text-color/brand': 'primary/400',
 
     // Background colors
@@ -231,10 +227,9 @@ export const colorVariables = {
     'bg-color/overlay': 'pure-black',
     'bg-color/surface': 'neutral/800',
     'bg-color/brand': 'primary/600',
-    'bg-color/success': 'success/950',
-    'bg-color/error': 'error/950',
-    'bg-color/warning': 'warning/950',
-    'bg-color/info': 'info/950',
+    'bg-color/success': 'success/1000',
+    'bg-color/error': 'error/1000',
+    'bg-color/warning': 'warning/1000',
 
     // Border colors
     'border-color/primary': 'neutral/700',
@@ -243,7 +238,6 @@ export const colorVariables = {
     'border-color/success': 'success/700',
     'border-color/error': 'error/700',
     'border-color/warning': 'warning/700',
-    'border-color/info': 'info/700',
 
     // Interactive colors
     'interactive/primary': 'primary/500',
