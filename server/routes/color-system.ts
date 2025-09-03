@@ -1,5 +1,11 @@
 import { RequestHandler } from "express";
-import { colorPrimitives, colorTokens, colorVariables, fusionColorSystem, mantineColorTheme } from "../../client/lib/design-system";
+import {
+  colorPrimitives,
+  colorTokens,
+  colorVariables,
+  fusionColorSystem,
+  mantineColorTheme,
+} from "../../client/lib/design-system";
 
 export interface ColorSystemResponse {
   primitives: typeof colorPrimitives;
@@ -43,10 +49,10 @@ export const handleColorSystem: RequestHandler = (req, res) => {
       totalPrimitives: Object.keys(colorPrimitives).length,
       totalTokens: Object.keys(colorTokens).length,
       totalVariables: Object.keys(colorVariables.light).length,
-      supportedModes: ['light', 'dark'],
+      supportedModes: ["light", "dark"],
     },
   };
-  
+
   res.json(response);
 };
 
@@ -60,7 +66,7 @@ export const handleFusionSchema: RequestHandler = (req, res) => {
       generatedAt: new Date().toISOString(),
     },
   };
-  
+
   res.json(response);
 };
 
@@ -74,7 +80,7 @@ export const handleMantineTheme: RequestHandler = (req, res) => {
       generatedAt: new Date().toISOString(),
     },
   };
-  
+
   res.json(response);
 };
 
@@ -102,13 +108,13 @@ export const handleTokens: RequestHandler = (req, res) => {
 
 // Get variables for specific mode
 export const handleVariables: RequestHandler = (req, res) => {
-  const mode = req.query.mode as 'light' | 'dark' || 'light';
-  
-  if (!['light', 'dark'].includes(mode)) {
+  const mode = (req.query.mode as "light" | "dark") || "light";
+
+  if (!["light", "dark"].includes(mode)) {
     res.status(400).json({ error: 'Invalid mode. Must be "light" or "dark".' });
     return;
   }
-  
+
   res.json({
     variables: colorVariables[mode],
     mode,

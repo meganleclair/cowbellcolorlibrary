@@ -79,7 +79,7 @@ export interface TokensResponse {
 
 export interface VariablesResponse {
   variables: Record<string, string>;
-  mode: 'light' | 'dark';
+  mode: "light" | "dark";
   meta: {
     total: number;
     version: string;

@@ -6,13 +6,17 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Color utility functions for the design system
-export function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
+export function hexToRgb(
+  hex: string,
+): { r: number; g: number; b: number } | null {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
-  } : null;
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
 }
 
 export function rgbToHex(r: number, g: number, b: number): string {
@@ -21,13 +25,13 @@ export function rgbToHex(r: number, g: number, b: number): string {
 
 export function getContrastColor(backgroundColor: string): string {
   const rgb = hexToRgb(backgroundColor);
-  if (!rgb) return '#000000';
+  if (!rgb) return "#000000";
 
   // Calculate relative luminance
   const luminance = (0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b) / 255;
 
   // Return black for light backgrounds, white for dark backgrounds
-  return luminance > 0.5 ? '#000000' : '#ffffff';
+  return luminance > 0.5 ? "#000000" : "#ffffff";
 }
 
 export function isValidHex(hex: string): boolean {
@@ -40,7 +44,7 @@ export function copyToClipboard(text: string): Promise<void> {
 
 export function formatColorName(name: string): string {
   return name
-    .split('/')
-    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(' / ');
+    .split("/")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" / ");
 }

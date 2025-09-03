@@ -1,6 +1,13 @@
-import { useState } from 'react';
-import { colorPrimitives, colorTokens, colorVariables, accentColors, resolveTokenColor, resolveVariableColor } from '@/lib/design-system';
-import { Copy, Check } from 'lucide-react';
+import { useState } from "react";
+import {
+  colorPrimitives,
+  colorTokens,
+  colorVariables,
+  accentColors,
+  resolveTokenColor,
+  resolveVariableColor,
+} from "@/lib/design-system";
+import { Copy, Check } from "lucide-react";
 
 interface ColorSwatchProps {
   label: string;
@@ -9,7 +16,12 @@ interface ColorSwatchProps {
   description?: string;
 }
 
-function ColorSwatch({ label, value, showCode = true, description }: ColorSwatchProps) {
+function ColorSwatch({
+  label,
+  value,
+  showCode = true,
+  description,
+}: ColorSwatchProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -20,8 +32,8 @@ function ColorSwatch({ label, value, showCode = true, description }: ColorSwatch
 
   return (
     <div className="group relative bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-200">
-      <div 
-        className="h-20 w-full relative cursor-pointer" 
+      <div
+        className="h-20 w-full relative cursor-pointer"
         style={{ backgroundColor: value }}
         onClick={handleCopy}
       >
@@ -63,7 +75,7 @@ function ColorScale({ title, colors, description }: ColorScaleProps) {
         {Object.entries(colors).map(([key, value]) => (
           <ColorSwatch
             key={key}
-            label={key.split('/').pop() || key}
+            label={key.split("/").pop() || key}
             value={value}
           />
         ))}
@@ -74,23 +86,23 @@ function ColorScale({ title, colors, description }: ColorScaleProps) {
 
 export function PrimitivesSection() {
   const grayColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('gray'))
+    Object.entries(colorPrimitives).filter(([key]) => key.includes("gray")),
   );
 
   const blueColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('blue'))
+    Object.entries(colorPrimitives).filter(([key]) => key.includes("blue")),
   );
 
   const greenColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('green'))
+    Object.entries(colorPrimitives).filter(([key]) => key.includes("green")),
   );
 
   const redColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('red'))
+    Object.entries(colorPrimitives).filter(([key]) => key.includes("red")),
   );
 
   const yellowColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('yellow'))
+    Object.entries(colorPrimitives).filter(([key]) => key.includes("yellow")),
   );
 
   return (
@@ -127,22 +139,24 @@ export function PrimitivesSection() {
 export function TokensSection() {
   const tokenGroups = {
     primary: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('primary-'))
+      Object.entries(colorTokens).filter(([key]) => key.startsWith("primary-")),
     ),
     neutral: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('neutral-'))
+      Object.entries(colorTokens).filter(([key]) => key.startsWith("neutral-")),
     ),
     error: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('error-'))
+      Object.entries(colorTokens).filter(([key]) => key.startsWith("error-")),
     ),
     warning: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('warning-'))
+      Object.entries(colorTokens).filter(([key]) => key.startsWith("warning-")),
     ),
     success: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('success-'))
+      Object.entries(colorTokens).filter(([key]) => key.startsWith("success-")),
     ),
     information: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('information-'))
+      Object.entries(colorTokens).filter(([key]) =>
+        key.startsWith("information-"),
+      ),
     ),
   };
 
@@ -152,10 +166,10 @@ export function TokensSection() {
         const resolvedTokens = Object.fromEntries(
           Object.entries(tokens).map(([key, primitiveKey]) => [
             key,
-            resolveTokenColor(key as keyof typeof colorTokens)
-          ])
+            resolveTokenColor(key as keyof typeof colorTokens),
+          ]),
         );
-        
+
         return (
           <ColorScale
             key={groupName}
@@ -170,20 +184,28 @@ export function TokensSection() {
 }
 
 export function VariablesSection() {
-  const [mode, setMode] = useState<'light' | 'dark'>('light');
+  const [mode, setMode] = useState<"light" | "dark">("light");
 
   const variableGroups = {
-    'Surface Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('surface-'))
+    "Surface Colors": Object.fromEntries(
+      Object.entries(colorVariables[mode]).filter(([key]) =>
+        key.startsWith("surface-"),
+      ),
     ),
-    'Icon Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('icon-'))
+    "Icon Colors": Object.fromEntries(
+      Object.entries(colorVariables[mode]).filter(([key]) =>
+        key.startsWith("icon-"),
+      ),
     ),
-    'Text Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('text-'))
+    "Text Colors": Object.fromEntries(
+      Object.entries(colorVariables[mode]).filter(([key]) =>
+        key.startsWith("text-"),
+      ),
     ),
-    'Border Colors': Object.fromEntries(
-      Object.entries(colorVariables[mode]).filter(([key]) => key.startsWith('border-'))
+    "Border Colors": Object.fromEntries(
+      Object.entries(colorVariables[mode]).filter(([key]) =>
+        key.startsWith("border-"),
+      ),
     ),
   };
 
@@ -193,21 +215,21 @@ export function VariablesSection() {
         <span className="text-sm font-medium text-gray-700">Mode:</span>
         <div className="flex bg-gray-100 rounded-lg p-1">
           <button
-            onClick={() => setMode('light')}
+            onClick={() => setMode("light")}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
-              mode === 'light'
-                ? 'bg-white text-gray-900 shadow-sm'
-                : 'text-gray-600 hover:text-gray-900'
+              mode === "light"
+                ? "bg-white text-gray-900 shadow-sm"
+                : "text-gray-600 hover:text-gray-900"
             }`}
           >
             Light
           </button>
           <button
-            onClick={() => setMode('dark')}
+            onClick={() => setMode("dark")}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
-              mode === 'dark'
-                ? 'bg-white text-gray-900 shadow-sm'
-                : 'text-gray-600 hover:text-gray-900'
+              mode === "dark"
+                ? "bg-white text-gray-900 shadow-sm"
+                : "text-gray-600 hover:text-gray-900"
             }`}
           >
             Dark
@@ -219,14 +241,16 @@ export function VariablesSection() {
         const resolvedVariables = Object.fromEntries(
           Object.entries(variables).map(([key, tokenKey]) => [
             key,
-            resolveVariableColor(key, mode)
-          ])
+            resolveVariableColor(key, mode),
+          ]),
         );
 
         return (
           <div key={groupName} className="space-y-4">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">{groupName}</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                {groupName}
+              </h3>
               <p className="text-sm text-gray-600 mt-1">
                 Semantic {groupName.toLowerCase()} for {mode} mode
               </p>
@@ -235,7 +259,7 @@ export function VariablesSection() {
               {Object.entries(resolvedVariables).map(([key, value]) => (
                 <ColorSwatch
                   key={key}
-                  label={key.replace(/-/g, ' ')}
+                  label={key.replace(/-/g, " ")}
                   value={value}
                   description={`${mode} mode`}
                 />
@@ -250,14 +274,15 @@ export function VariablesSection() {
         <div>
           <h3 className="text-lg font-semibold text-gray-900">Accent Colors</h3>
           <p className="text-sm text-gray-600 mt-1">
-            Decorative colors for charts, badges, and non-semantic elements ({mode} mode)
+            Decorative colors for charts, badges, and non-semantic elements (
+            {mode} mode)
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {Object.entries(accentColors[mode]).map(([key, value]) => (
             <ColorSwatch
               key={key}
-              label={key.replace(/-/g, ' ')}
+              label={key.replace(/-/g, " ")}
               value={value}
               description={`${mode} mode`}
             />

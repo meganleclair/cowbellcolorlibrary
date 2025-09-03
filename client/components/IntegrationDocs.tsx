@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import { useState } from "react";
+import { Copy, Check } from "lucide-react";
 
 const codeExamples = {
   tailwind: `// tailwind.config.ts
@@ -126,7 +126,7 @@ function Button({ variant = 'primary', children }) {
       {children}
     </button>
   );
-}`
+}`,
 };
 
 interface CodeBlockProps {
@@ -152,7 +152,7 @@ function CodeBlock({ code, language }: CodeBlockProps) {
           className="flex items-center gap-2 px-2 py-1 rounded bg-gray-700 hover:bg-gray-600 transition-colors"
         >
           {copied ? <Check size={14} /> : <Copy size={14} />}
-          {copied ? 'Copied!' : 'Copy'}
+          {copied ? "Copied!" : "Copy"}
         </button>
       </div>
       <pre className="bg-gray-900 text-gray-100 p-4 rounded-b-lg overflow-x-auto">
@@ -163,15 +163,31 @@ function CodeBlock({ code, language }: CodeBlockProps) {
 }
 
 export function IntegrationDocs() {
-  const [activeTab, setActiveTab] = useState('tailwind');
+  const [activeTab, setActiveTab] = useState("tailwind");
 
   const tabs = [
-    { id: 'tailwind', label: 'Tailwind CSS', description: 'Integration with Tailwind CSS' },
-    { id: 'mantine', label: 'Mantine', description: 'Mantine UI library setup' },
-    { id: 'css', label: 'CSS Variables', description: 'Plain CSS custom properties' },
-    { id: 'scss', label: 'SCSS', description: 'SCSS variables and functions' },
-    { id: 'typescript', label: 'TypeScript', description: 'Type-safe color usage' },
-    { id: 'react', label: 'React', description: 'React component examples' },
+    {
+      id: "tailwind",
+      label: "Tailwind CSS",
+      description: "Integration with Tailwind CSS",
+    },
+    {
+      id: "mantine",
+      label: "Mantine",
+      description: "Mantine UI library setup",
+    },
+    {
+      id: "css",
+      label: "CSS Variables",
+      description: "Plain CSS custom properties",
+    },
+    { id: "scss", label: "SCSS", description: "SCSS variables and functions" },
+    {
+      id: "typescript",
+      label: "TypeScript",
+      description: "Type-safe color usage",
+    },
+    { id: "react", label: "React", description: "React component examples" },
   ];
 
   return (
@@ -181,7 +197,8 @@ export function IntegrationDocs() {
           Integration Examples
         </h3>
         <p className="text-gray-600">
-          Code examples showing how to integrate the Fusion Color System into different frameworks and tools.
+          Code examples showing how to integrate the Fusion Color System into
+          different frameworks and tools.
         </p>
       </div>
 
@@ -194,8 +211,8 @@ export function IntegrationDocs() {
               onClick={() => setActiveTab(tab.id)}
               className={`whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === tab.id
-                  ? 'border-blue-500 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  ? "border-blue-500 text-blue-600"
+                  : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
               }`}
             >
               {tab.label}
@@ -206,31 +223,42 @@ export function IntegrationDocs() {
 
       {/* Tab Content */}
       <div className="space-y-4">
-        {tabs.map((tab) => (
-          activeTab === tab.id && (
-            <div key={tab.id} className="space-y-4">
-              <div>
-                <h4 className="font-medium text-gray-900">{tab.label}</h4>
-                <p className="text-sm text-gray-600">{tab.description}</p>
+        {tabs.map(
+          (tab) =>
+            activeTab === tab.id && (
+              <div key={tab.id} className="space-y-4">
+                <div>
+                  <h4 className="font-medium text-gray-900">{tab.label}</h4>
+                  <p className="text-sm text-gray-600">{tab.description}</p>
+                </div>
+                <CodeBlock
+                  code={codeExamples[tab.id as keyof typeof codeExamples]}
+                  language={tab.label}
+                />
               </div>
-              <CodeBlock 
-                code={codeExamples[tab.id as keyof typeof codeExamples]} 
-                language={tab.label} 
-              />
-            </div>
-          )
-        ))}
+            ),
+        )}
       </div>
 
       {/* Best Practices */}
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
         <h4 className="font-semibold text-blue-900 mb-2">Best Practices</h4>
         <ul className="space-y-1 text-sm text-blue-800">
-          <li>• Always use variables (Tier 3) in your components, not primitives directly</li>
-          <li>• Define semantic tokens (Tier 2) for your specific brand colors</li>
+          <li>
+            • Always use variables (Tier 3) in your components, not primitives
+            directly
+          </li>
+          <li>
+            • Define semantic tokens (Tier 2) for your specific brand colors
+          </li>
           <li>• Use the resolver functions for dynamic color access</li>
-          <li>• Implement proper light/dark mode switching at the variable level</li>
-          <li>• Keep primitives (Tier 1) as your single source of truth for color values</li>
+          <li>
+            • Implement proper light/dark mode switching at the variable level
+          </li>
+          <li>
+            • Keep primitives (Tier 1) as your single source of truth for color
+            values
+          </li>
         </ul>
       </div>
     </div>

@@ -8,7 +8,7 @@ import {
   handleMantineTheme,
   handlePrimitives,
   handleTokens,
-  handleVariables
+  handleVariables,
 } from "./routes/color-system";
 
 export function createServer() {
