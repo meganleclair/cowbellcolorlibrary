@@ -127,28 +127,22 @@ export function PrimitivesSection() {
 export function TokensSection() {
   const tokenGroups = {
     primary: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('primary/'))
-    ),
-    secondary: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('secondary/'))
-    ),
-    success: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('success/'))
-    ),
-    emerald: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('emerald/'))
-    ),
-    error: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('error/'))
-    ),
-    warning: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('warning/'))
-    ),
-    amber: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('amber/'))
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('primary-'))
     ),
     neutral: Object.fromEntries(
-      Object.entries(colorTokens).filter(([key]) => key.startsWith('neutral/'))
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('neutral-'))
+    ),
+    error: Object.fromEntries(
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('error-'))
+    ),
+    warning: Object.fromEntries(
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('warning-'))
+    ),
+    success: Object.fromEntries(
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('success-'))
+    ),
+    information: Object.fromEntries(
+      Object.entries(colorTokens).filter(([key]) => key.startsWith('information-'))
     ),
   };
 
