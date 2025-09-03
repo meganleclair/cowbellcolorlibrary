@@ -163,25 +163,25 @@ export default function Index() {
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   <span>Primitives</span>
-                  <span className="font-mono">66</span>
+                  <span className="font-mono">60</span>
                 </div>
                 <div className={`flex justify-between transition-colors duration-300 ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   <span>Tokens</span>
-                  <span className="font-mono">66</span>
+                  <span className="font-mono">88</span>
                 </div>
                 <div className={`flex justify-between transition-colors duration-300 ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   <span>Variables</span>
-                  <span className="font-mono">40</span>
+                  <span className="font-mono">30</span>
                 </div>
                 <div className={`flex justify-between transition-colors duration-300 ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   <span>Light/Dark</span>
-                  <span className="text-emerald-500">✓</span>
+                  <span className="text-green-500">✓</span>
                 </div>
               </div>
             </div>
