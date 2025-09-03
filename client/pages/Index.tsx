@@ -323,6 +323,9 @@ export default function Index() {
                       <li>• Variables tier includes contextual mappings for light and dark modes</li>
                     </ul>
                   </div>
+
+                  {/* Integration Documentation */}
+                  <IntegrationDocs />
                 </div>
               )}
             </div>
