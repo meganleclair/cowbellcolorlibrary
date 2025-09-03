@@ -76,25 +76,21 @@ export function PrimitivesSection() {
   const grayColors = Object.fromEntries(
     Object.entries(colorPrimitives).filter(([key]) => key.includes('gray'))
   );
-  
+
   const blueColors = Object.fromEntries(
     Object.entries(colorPrimitives).filter(([key]) => key.includes('blue'))
   );
-  
-  const emeraldColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('emerald'))
+
+  const greenColors = Object.fromEntries(
+    Object.entries(colorPrimitives).filter(([key]) => key.includes('green'))
   );
-  
+
   const redColors = Object.fromEntries(
     Object.entries(colorPrimitives).filter(([key]) => key.includes('red'))
   );
-  
-  const amberColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('amber'))
-  );
-  
-  const purpleColors = Object.fromEntries(
-    Object.entries(colorPrimitives).filter(([key]) => key.includes('purple'))
+
+  const yellowColors = Object.fromEntries(
+    Object.entries(colorPrimitives).filter(([key]) => key.includes('yellow'))
   );
 
   return (
@@ -110,8 +106,8 @@ export function PrimitivesSection() {
         description="Primary brand colors and interactive elements"
       />
       <ColorScale
-        title="Emerald"
-        colors={emeraldColors}
+        title="Green"
+        colors={greenColors}
         description="Success states and positive actions"
       />
       <ColorScale
@@ -120,14 +116,9 @@ export function PrimitivesSection() {
         description="Error states and destructive actions"
       />
       <ColorScale
-        title="Amber"
-        colors={amberColors}
+        title="Yellow"
+        colors={yellowColors}
         description="Warning states and cautionary elements"
-      />
-      <ColorScale
-        title="Purple"
-        colors={purpleColors}
-        description="Information and secondary brand elements"
       />
     </div>
   );
