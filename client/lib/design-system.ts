@@ -162,6 +162,33 @@ export const colorTokens = {
   'neutral/900': 'color/gray/900',
   'neutral/1000': 'color/gray/1000',
 
+  // Emerald colors (alias for Green)
+  'emerald/25': 'color/green/25',
+  'emerald/50': 'color/green/50',
+  'emerald/100': 'color/green/100',
+  'emerald/200': 'color/green/200',
+  'emerald/300': 'color/green/300',
+  'emerald/400': 'color/green/400',
+  'emerald/500': 'color/green/500',
+  'emerald/600': 'color/green/600',
+  'emerald/700': 'color/green/700',
+  'emerald/800': 'color/green/800',
+  'emerald/900': 'color/green/900',
+  'emerald/1000': 'color/green/1000',
+
+  // Amber colors (alias for Yellow)
+  'amber/50': 'color/yellow/50',
+  'amber/100': 'color/yellow/100',
+  'amber/200': 'color/yellow/200',
+  'amber/300': 'color/yellow/300',
+  'amber/400': 'color/yellow/400',
+  'amber/500': 'color/yellow/500',
+  'amber/600': 'color/yellow/600',
+  'amber/700': 'color/yellow/700',
+  'amber/800': 'color/yellow/800',
+  'amber/900': 'color/yellow/900',
+  'amber/1000': 'color/yellow/1000',
+
   // Special tokens
   'pure-white': 'color/white',
   'pure-black': 'color/black',
